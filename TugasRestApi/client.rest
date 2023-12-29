@@ -1,0 +1,51 @@
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "faizul@gmail.com",
+    "username": "faizul",
+    "password":"faizul123"
+}
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "iwal@gmail.com",
+    "username": "iwal",
+    "password":"iwal123"
+}
+
+###
+GET http://localhost:3000/api/transactions
+
+###
+POST http://localhost:3000/api/transactions
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZmJkNTI2MWQ5NTYwZDk2YTE0MmMiLCJpYXQiOjE3MDM3NDc2MzUsImV4cCI6MTcwMzc1MTIzNX0.F0ANHxStjD6VwDyxsbK4PNW47Emzhdzl3UtUTKweORU
+
+{
+    "keterangan": "geri salut",
+    "nominal": 5000,
+    "jenis":"pengeluaran"
+}
+
+###
+GET http://localhost:3000/api/transactions/658d2763d8391013650eeac1
+
+###
+PUT http://localhost:3000/api/transactions/658d2763d8391013650eeac1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZmJkNTI2MWQ5NTYwZDk2YTE0MmMiLCJpYXQiOjE3MDM3NDc2MzUsImV4cCI6MTcwMzc1MTIzNX0.F0ANHxStjD6VwDyxsbK4PNW47Emzhdzl3UtUTKweORU
+
+{
+    "keterangan": "jam tangan iwal bagus",
+    "nominal":4000000,
+    "jenis":"pengeluaran"
+}
+
+###
+DELETE http://localhost:3000/api/transactions/658d2763d8391013650eeac1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZmJkNTI2MWQ5NTYwZDk2YTE0MmMiLCJpYXQiOjE3MDM3NDc2MzUsImV4cCI6MTcwMzc1MTIzNX0.F0ANHxStjD6VwDyxsbK4PNW47Emzhdzl3UtUTKweORU

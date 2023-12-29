@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "318edbd0-5467-4398-bf12-d6d93969fc7e",
+		"name": "API REGISTER, LOGIN, DAN TRANSAKSI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29550917"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"iwal@gmail.com\",\r\n    \"username\": \"iwal\",\r\n    \"password\":\"iwal123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bowo@gmail.com\",\r\n    \"username\": \"bowo\",\r\n    \"password\":\"bowo123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Data Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Data Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/658d23f3621fa914eeb91815",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"658d23f3621fa914eeb91815"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZmJkNTI2MWQ5NTYwZDk2YTE0MmMiLCJpYXQiOjE3MDM3NTIzMzksImV4cCI6MTcwMzc1NTkzOX0.QO5EIXpFzUgkG4wzkA3WJqsEwd-NkkcN0iI4IckYxw4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keterangan\": \"Teh Goyang\",\r\n    \"nominal\": 2000,\r\n    \"jenis\":\"pengeluaran\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Transactions",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZmJkNTI2MWQ5NTYwZDk2YTE0MmMiLCJpYXQiOjE3MDM3NTIzMzksImV4cCI6MTcwMzc1NTkzOX0.QO5EIXpFzUgkG4wzkA3WJqsEwd-NkkcN0iI4IckYxw4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keterangan\": \"Sosis Kimbo\",\r\n    \"nominal\": 20000,\r\n    \"jenis\":\"pemasukan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/658d355d760b320671194fb7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"658d355d760b320671194fb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Transactions",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZmJkNTI2MWQ5NTYwZDk2YTE0MmMiLCJpYXQiOjE3MDM3NTIzMzksImV4cCI6MTcwMzc1NTkzOX0.QO5EIXpFzUgkG4wzkA3WJqsEwd-NkkcN0iI4IckYxw4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/658d355d760b320671194fb7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"658d355d760b320671194fb7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
